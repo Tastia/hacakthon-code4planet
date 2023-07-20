@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" alt="DeVinci Alumni Logo" />
+            <nav>
+                <p>Home</p>
+                <p>About</p>
+                <p>Contact</p>
+            </nav>
+            <img src="images/icon-search.svg" alt="Loupe" />
+        </header>
+        <img id="banner" src="images/banner.png" alt="Bannière décorative" />
+
+        <div id="page-formular" class="page-formular">
+            <h1>Rechercher un profil</h1>
+            <div class="fields">
+                <div class="field">
+                    <label for="company">Entreprise</label>
+
+                    <input
+                        name="pets"
+                        id="company"
+                        placeholder="nom de l'enprerise"
+                    />
+                </div>
+                <div class="field">
+                    <label for="job-title">Titre de l'annonce</label>
+
+                    <input name="pets" id="job-title" />
+                </div>
+                <div class="field">
+                    <label for="job-desc">Description de l'annonce</label>
+
+                    <input name="pets" id="job-desc" />
+                </div>
+                <div class="field">
+                    <label for="job-type">Type de contrat</label>
+
+                    <select name="pets" id="job-type">
+                        <option value="CDI">CDI</option>
+                        <option value="CDD">CDD</option>
+                        <option value="Alternance">Alternance</option>
+                        <option value="Stage">Stage</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="job">Métier</label>
+
+                    <select name="pets" id="job">
+                        <option value="Développeur front">
+                            Développeur front
+                        </option>
+                        <option value="Développeur back">
+                            Développeur back
+                        </option>
+                        <option value="UX/UI designer">UX/UI designer</option>
+                        <option value="Chef de projet">Chef de projet</option>
+                        <option value="3D">3D</option>
+                        <option value="Community manager">
+                            Community manager
+                        </option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="job-subject">Secteur d'activité</label>
+
+                    <select name="pets" id="job-subject">
+                        <option value="BTP">BTP</option>
+                        <option value="Automobile">Automobile</option>
+                        <option value="Tech">Tech</option>
+                        <option value="Fintech">Fintech</option>
+                        <option value="Santé">Santé</option>
+                        <option value="ONG">ONG</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="xp">Années d'experiences</label>
+
+                    <input type="number" id="xp" value="0" />
+                </div>
+                <button id="button">Valider</button>
+            </div>
+        </div>
+        <div id="page-list" class="page-list hidden">
+            <div id="filters">
+                <div>
+                    <div>
+                        <img src="images/filter.svg" alt="icon" />
+                        <p>Filter</p>
+                    </div>
+                    <img src="images/big-round.svg" alt="icon" />
+                    <img src="/images/view-list.svg" alt="icon" />
+                    <p>|</p>
+                    <p>Showing 1-16 of 32 results</p>
+                </div>
+                <div>
+                    <div>
+                        <label for="show-nb">Show</label>
+                        <input
+                            type="number"
+                            name="show-nb"
+                            id="show-nb"
+                            placeholder="16"
+                        />
+                    </div>
+                    <div>
+                        <label for="sort-by">Sort by</label>
+                        <select name="sort-by" id="sort-by">
+                            <option value="default">Default</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="results-container"></div>
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
